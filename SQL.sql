@@ -20,7 +20,9 @@ select * from Categories
 
 CREATE TABLE Readers (
     ReaderID INT PRIMARY KEY IDENTITY(1,1),
-    FullName NVARCHAR(255) NOT NULL,
+    UserName NVARCHAR(100) NOT NULL UNIQUE,
+    PassWord NVARCHAR(10) NOT NULL UNIQUE,
+    --FullName NVARCHAR(255) NOT NULL,
     DOB DATE,
     PhoneNumber NVARCHAR(15),
     Email NVARCHAR(255),
