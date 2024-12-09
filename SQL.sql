@@ -1,87 +1,87 @@
 create database QLTV;
-use QLTV;
+use QLTV
 
-CREATE TABLE Books (
-    BookID INT PRIMARY KEY IDENTITY(1,1),
-    Title NVARCHAR(255) NOT NULL,
-    Author NVARCHAR(255),
-    Publisher NVARCHAR(255),
-    Year INT,
-    CategoryID INT FOREIGN KEY REFERENCES Categories(CategoryID) on delete cascade,
-    Quantity INT NOT NULL
+create table TheLoai(
+MaTheLoai varchar(6) primary key, --Ma The Loai bat dau bang chu "TL" 
+TenTheLoai nvarchar(100)
 );
-select * from Books
-CREATE TABLE Categories (
-    CategoryID INT PRIMARY KEY IDENTITY(1,1),
-    CategoryName NVARCHAR(255) NOT NULL
-);
+select * from TheLoai
+insert into TheLoai(MaTheLoai, TenTheLoai) values
+('TL1','Tình cảm'),
+('TL2','Trinh thám'),
+('TL3','Kinh dị'),
+('TL4','Viễn tưởng'),
+('TL5','Giáo dục');
 
-select * from Categories
-
-CREATE TABLE Readers (
-    ReaderID INT PRIMARY KEY IDENTITY(1,1),
-    UserName NVARCHAR(100) NOT NULL UNIQUE,
-    PassWord NVARCHAR(10) NOT NULL UNIQUE,
-    --FullName NVARCHAR(255) NOT NULL,
-    DOB DATE,
-    PhoneNumber NVARCHAR(15),
-    Email NVARCHAR(255),
-    Address NVARCHAR(255)
+create table Sach(
+MaSach varchar(6) primary key, -- Ma Sach bat dau bang ki tu "S"
+TenSach nvarchar(255),
+MaTheLoai varchar(6) foreign key (MaTheLoai) references TheLoai(MaTheLoai) on delete cascade,
+TacGia nvarchar(255), 
+NhaXuatBan nvarchar(255),
+NamXuatBan int
 );
 
-CREATE TABLE BorrowRecords (
-    BorrowID INT PRIMARY KEY IDENTITY(1,1),
-    ReaderID INT FOREIGN KEY REFERENCES Readers(ReaderID) on delete cascade,
-    BookID INT FOREIGN KEY REFERENCES Books(BookID) on delete cascade ,
-    BorrowDate DATE NOT NULL,
-    ReturnDate DATE,
-    Status NVARCHAR(50) NOT NULL
+select * from Sach
+insert into Sach(MaSach, TenSach, MaTheLoai, TacGia, NhaXuatBan, NamXuatBan)values
+('S1','Bên nhau trọn đời','TL1','Cố Mạn','', '' )
+
+ 
+
+
+create table DocGia(
+MaDocGia varchar(6) primary key, --Ma Doc gia bat dau bang DG
+HoTen nvarchar(255),
+Username nvarchar(10) unique,
+Password nvarchar(10) unique,
+NgaySinh date, 
+SoDienThoai nvarchar(255),
+Email nvarchar(255),
+DiaChi nvarchar(255)
+)
+
+select * from DocGia
+insert into DocGia(MaDocGia, HoTen, NgaySinh, SoDienThoai, Email, DiaChi, Username, Password) values
+('DG1', 'Nguyen Van A', '01-01-2000', '01111111111', 'anguyenvan@gmail.com','280 An Duong Vuong, P4, Q5, TPHCM','anv123', '01012000')
+
+create table NhanVien(
+MaNhanVien varchar(6) primary key, --Ma Nhan vien bat dau bang chu NV
+HoTen nvarchar(255),
+NgaySinh date,
+Username nvarchar(10) unique,
+Password nvarchar(10) unique,
+SoDienThoai nvarchar(255),
+Email nvarchar(255),
+DiaChi nvarchar(255)
+)
+
+insert into NhanVien(MaNhanVien, HoTen, NgaySinh, Username, Password, Email, SoDienThoai, DiaChi)values
+('NV1', 'Tran Van B', '01-01-1999', 'btranvan12', '123456', 'tranvanb123@gmail.com', '0222222222', '222 Le Van Sy, Q3')
+
+
+create table GiaoDichMuonSach(
+MaTheMuon varchar(6) primary key, --Ma the muon bat dau bang chu TM
+MaDocGia varchar(6) foreign key (MaDocGia) references DocGia(MaDocGia) on delete cascade,
+MaSach varchar(6) foreign key (MaSach) references Sach(MaSach) on delete cascade,
+NgayMuon date,
+NgayTraDuKien date,
+NgayTraThucTe date,
+TrangThai nvarchar(255)
+)
+
+select * from GiaoDichMuonSach
+insert into GiaoDichMuonSach(MaTheMuon, MaDocGia, MaSach, NgayMuon, NgayTraDuKien, NgayTraThucTe, TrangThai)values
+('TM1', 'DG1', 'S1', '2024-12-20', '2024-12-27', '2024-12-30', 'Chua Tra')
+
+
+
+create table TienPhat( -- Khong co Khoa chinh
+MaTheMuon varchar(6) foreign key (MaTheMuon) references GiaoDichMuonSach(MaTheMuon),
+SoTienPhat real,
+TrangThaiThanhToan nvarchar(255)
 );
-CREATE TABLE Staff (
-    StaffID INT PRIMARY KEY IDENTITY(1,1),
-    FullName NVARCHAR(255) NOT NULL,
-    Username NVARCHAR(100) NOT NULL UNIQUE,
-    Password NVARCHAR(255) NOT NULL,
-    Role NVARCHAR(50) NOT NULL
-);
-select * from Categories
-INSERT INTO Categories (CategoryName)VALUES 
-('Khoa hoc vien tuong'),
-('Kinh te hoc'),
-('Y hoc'),
-('Tam Ly hoc'),
-('Nghe Thuat');
-
-INSERT INTO Books (Title, Author, Publisher, Year, CategoryID, Quantity)VALUES
-('Dune', 'Frank Herbert', 'Chilton Books', 1965, 6, 7),
-('Principles of Economics', 'N. Gregory Mankiw', 'Cengage', 2020, 7, 5),
-('Gray''s Anatomy', 'Henry Gray', 'Elsevier', 2019, 8, 10),
-('Thinking, Fast and Slow', 'Daniel Kahneman', 'Farrar, Straus and Giroux', 2011, 9, 8),
-('The Art of War', 'Sun Tzu', 'Oxford University Press', 2005, 10, 12);
+select * from TienPhat
+insert into TienPhat(MaTheMuon, SoTienPhat, TrangThaiThanhToan)values
+('TM1', 3*10000, 'Chua Thanh Toan')
 
 
-INSERT INTO Readers (FullName, DOB, PhoneNumber, Email, Address)VALUES
-('Phạm Văn E', '1992-07-10', '0934567890', 'phamvane@gmail.com', 'Đà Nẵng'),
-('Trần Thị F', '1988-11-25', '0945678901', 'tranthif@gmail.com', 'Hà Nội'),
-('Hoàng Minh G', '2001-05-15', '0956789012', 'hoangminhg@gmail.com', 'Hồ Chí Minh'),
-('Ngô Thị H', '1990-02-20', '0967890123', 'ngothih@gmail.com', 'Huế'),
-('Lý Văn K', '1997-09-30', '0978901234', 'lyvank@gmail.com', 'Cần Thơ');
-
-INSERT INTO BorrowRecords (ReaderID, BookID, BorrowDate, ReturnDate, Status)VALUES
-(1, 1, '2024-11-01', '2024-11-10', 'Đã trả'),
-(2, 2, '2024-11-05', NULL, 'Chưa trả'),
-(3, 3, '2024-11-07', '2024-11-15', 'Đã trả'),
-(4, 4, '2024-11-10', NULL, 'Chưa trả'),
-(5, 5, '2024-11-12', NULL, 'Chưa trả');
-
-INSERT INTO Staff (FullName, Username, Password, Role)VALUES
-('Nguyễn Văn M', 'nvmanh', 'password123', 'User'),
-('Lê Thị N', 'lthinh', 'lethi@123', 'User'),
-('Phạm Quốc P', 'pqphat', 'passphat', 'User'),
-('Đặng Thị Q', 'dtquyen', 'quyen!pass', 'User'),
-('Trương Văn R', 'tvrang', 'rang@2024', 'Admin');
-
-select * from Books
-
-update Books  set Quantity = Quantity - 1
-where Title = 'Dune';
