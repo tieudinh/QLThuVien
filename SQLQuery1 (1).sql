@@ -1,4 +1,4 @@
-﻿create database QLThuVien
+create database QLThuVien
 drop database QLThuVien
 use QLThuVien
 
@@ -60,7 +60,7 @@ insert into TaiKhoan(MaDocGia, TenDangNhap, MatKhau, VaiTro) values
 ('DG4', 'uyen23van2','666', '2');
 
 insert into PhieuMuon(MaPhieu, MaDocGia, MaSach, NgayMuon, NgayPhaiTra) values
-('MP01', 'DG1', 'MS01', '2024-12-20', '2024-12-30'),
+('MP01', 'DG1', 'MS01', '2024-12-20', '2024-12-25'),
 ('MP011', 'DG2', 'MS01', '2024-12-10', '2024-12-20'),
 ('MP03', 'DG3', 'MS02', '2024-12-20', '2024-12-30'),
 ('MP033', 'DG1', 'MS03', '2024-12-20', '2024-12-30'),
@@ -81,7 +81,3 @@ select * from PhieuMuon where MaPhieu = 'MP02'
 SELECT * FROM Sach WHERE MaSach = 'MP02';
 select * from PhieuTra;
 
-SELECT * FROM Sach WHERE MaSach = 'MP06';
-SELECT * FROM DocGia WHERE MaDocGia = 'DG1';
-INSERT INTO Sach (MaSach, 1) VALUES ('MP06', 3);
-INSERT INTO DocGia (MaDocGia, 2) VALUES ('DG1', 3);
