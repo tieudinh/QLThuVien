@@ -1,0 +1,365 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace QLPhieuMuon
+{
+    public partial class frmPhieuMuon : Form
+    {
+        public frmPhieuMuon()
+        {
+            InitializeComponent();
+            string cs = "Data source = LAPTOP-4EC6PB65\\MSSQLSERVER1; Initial Catalog =  QLThuVien; Integrated Security = True; TrustServerCertificate = True";
+            connsql = new SqlConnection(cs);
+        }
+        private SqlConnection connsql;
+        private int SelectedRowIndex;
+        string DuocChon, makhoa;
+
+        private void Load_DuLieu()
+        {
+            try
+            {
+                if (connsql.State == ConnectionState.Closed)
+                {
+                    connsql.Open();
+                }
+
+                SqlCommand cmd = new SqlCommand("proc_GetClassByDept", connsql);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@MaPhieu", txtMaPhieu.Text);
+                SqlDataReader dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                dr.Close();
+                dgvBang.DataSource = dt;
+                connsql.Close();
+                dgvBang.Columns[0].Width = 250;
+                dgvBang.Columns[1].Width = 250;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bat dau...");//"Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+        }
+        private void Load_DuLieu2()
+        {
+            try
+            {
+                if (connsql.State == ConnectionState.Closed)
+                {
+                    connsql.Open();
+                }
+                string query = "select * from dbo.PhieuTra(@MaPhieu)";
+                SqlCommand cmd = new SqlCommand(query, connsql);
+                //cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@MaPhieu", txtMaPhieu.Text);
+                SqlDataReader dr = cmd.ExecuteReader();
+                DataTable dt = new DataTable();
+                dt.Load(dr);
+                dr.Close();
+                dgvBang.DataSource = dt;
+                connsql.Close();
+                dgvBang.Columns[0].Width = 250;
+                dgvBang.Columns[1].Width = 250;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bat dau...");//"Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+        }
+        private string getNewMaPhieu()
+        {
+            string query = "select MAX(MaPhieu) from PhieuMuon where MaPhieu like 'M%'";
+            SqlCommand cmd = new SqlCommand(query, connsql);
+            object result = cmd.ExecuteScalar();
+
+            int n = 0;
+            if (result != DBNull.Value)
+            {
+                n = int.Parse(result.ToString().Substring(2));
+            }
+
+            string newMaLop = "MP" + (n + 1).ToString("00");
+            return newMaLop;
+        }
+        private string getNewMaDocGia()
+        {
+            string query = "select MaDocGia from PhieuMuon where MaSach = @MaSach";
+            SqlCommand cmd = new SqlCommand(query, connsql);
+            object result = cmd.ExecuteScalar();
+
+            string newMaDocGia = "";
+            return newMaDocGia;
+        }
+
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(txtMaPhieu.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập Mã phiếu cần sửa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (connsql.State == ConnectionState.Closed)
+                {
+                    connsql.Open();
+                }
+
+                string checkQuery = "SELECT COUNT(*) FROM PhieuMuon WHERE MaPhieu = @MaPhieu";
+                SqlCommand checkCmd = new SqlCommand(checkQuery, connsql);
+                checkCmd.Parameters.AddWithValue("@MaPhieu", txtMaPhieu.Text);
+
+                int recordCount = (int)checkCmd.ExecuteScalar();
+                if (recordCount == 0)
+                {
+                    MessageBox.Show("Mã phiếu không tồn tại. Vui lòng kiểm tra lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                string updateQuery = @"UPDATE PhieuMuon SET MaDocGia = @MaDocGia, MaSach = @MaSach, NgayMuon = @NgayMuon, NgayPhaiTra = @NgayPhaiTra WHERE MaPhieu = @MaPhieu";
+                SqlCommand updateCmd = new SqlCommand(updateQuery, connsql);
+                updateCmd.Parameters.AddWithValue("@MaPhieu", txtMaPhieu.Text);
+                updateCmd.Parameters.AddWithValue("@MaDocGia", txtMaDocGia.Text);
+                updateCmd.Parameters.AddWithValue("@MaSach", txtMaSach.Text);
+                updateCmd.Parameters.AddWithValue("@NgayMuon", txtNgayMuon.Text);
+                updateCmd.Parameters.AddWithValue("@NgayPhaiTra", txtNgayPhaiTra.Text);
+
+                updateCmd.ExecuteNonQuery();
+
+                MessageBox.Show("Cập nhật phiếu mượn thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                UpdateDataPhieuMuon();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Không thể sửa phiếu mượn. Lỗi: {ex.Message}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (connsql.State == ConnectionState.Open)
+                {
+                    connsql.Close();
+                }
+            }
+        }
+        private void UpdateDataPhieuMuon()
+        {
+            try
+            {
+                if (connsql.State == ConnectionState.Closed)
+                {
+                    connsql.Open();
+                }
+                string sel = "select * from PhieuMuon";
+                SqlDataAdapter adapter = new SqlDataAdapter(sel, connsql);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+
+                dgvBang.DataSource = table;
+                dgvBang.Columns[1].Width = 250;
+                if (connsql.State == ConnectionState.Open)
+                {
+                    connsql.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Failed");
+            }
+        }
+        private void UpdateDataPhieuTra()
+        {
+            try
+            {
+                if (connsql.State == ConnectionState.Closed)
+                {
+                    connsql.Open();
+                }
+                string sel = "select * from PhieuTra";
+                SqlDataAdapter adapter = new SqlDataAdapter(sel, connsql);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+
+                dgvBang.DataSource = table;
+                dgvBang.Columns[1].Width = 250;
+                if (connsql.State == ConnectionState.Open)
+                {
+                    connsql.Close();
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Failed");
+            }
+        }
+        private void frmPhieuMuon_Load(object sender, EventArgs e)
+        {
+            UpdateDataPhieuMuon();
+        }
+
+        private void dgvBang_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DuocChon = dgvBang.Rows[e.RowIndex].Cells[2].Value.ToString();
+            string cur = "select MaDocGia from PhieuMuon where MaPhieu = @MaPhieu";
+            SqlCommand command = new SqlCommand(cur, connsql);
+            command.Parameters.AddWithValue("@MaPhieu", DuocChon);
+
+            try
+            {
+                if (connsql.State == ConnectionState.Closed)
+                {
+                    connsql.Open();
+                }
+
+                object res = command.ExecuteScalar();
+                if (res != null)
+                {
+                    txtMaPhieu.Text = res.ToString();
+                }
+
+                if (connsql.State == ConnectionState.Open)
+                {
+                    connsql.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Khoá ngoại");
+            }
+            txtMaDocGia.Text = dgvBang.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtMaSach.Text = dgvBang.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtNgayMuon.Text = dgvBang.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtNgayPhaiTra.Text = dgvBang.Rows[e.RowIndex].Cells[4].Value.ToString();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvBang.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Vui lòng chọn ít nhất một phiếu mượn để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                DialogResult confirmResult = MessageBox.Show(
+                    "Bạn có chắc chắn muốn xóa các phiếu mượn đã chọn không?",
+                    "Xác nhận",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (confirmResult != DialogResult.Yes)
+                {
+                    return;
+                }
+
+                if (connsql.State == ConnectionState.Closed)
+                {
+                    connsql.Open();
+                }
+
+                foreach (DataGridViewRow row in dgvBang.SelectedRows)
+                {
+                    string maPhieu = row.Cells["MaPhieu"].Value.ToString();
+
+                    string query = "DELETE FROM PhieuMuon WHERE MaPhieu = @MaPhieu";
+                    SqlCommand cmd = new SqlCommand(query, connsql);
+                    cmd.Parameters.AddWithValue("@MaPhieu", maPhieu);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Xóa thành công các phiếu mượn đã chọn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Cập nhật lại DataGridView sau khi xóa
+                UpdateDataPhieuMuon();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Có lỗi xảy ra: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (connsql.State == ConnectionState.Open)
+                {
+                    connsql.Close();
+                }
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (connsql.State == ConnectionState.Closed)
+                {
+                    connsql.Open();
+                }
+
+                string checkMaDocGiaQuery = "SELECT COUNT(*) FROM DocGia WHERE MaDocGia = @MaDocGia";
+                SqlCommand checkMaDocGiaCmd = new SqlCommand(checkMaDocGiaQuery, connsql);
+                checkMaDocGiaCmd.Parameters.AddWithValue("@MaDocGia", txtMaDocGia.Text);
+                int docGiaCount = (int)checkMaDocGiaCmd.ExecuteScalar();
+                if (docGiaCount == 0)
+                {
+                    MessageBox.Show("Mã độc giả không tồn tại. Vui lòng kiểm tra lại.");
+                    return;
+                }
+
+                string checkMaSachQuery = "SELECT COUNT(*) FROM Sach WHERE MaSach = @MaSach";
+                SqlCommand checkMaSachCmd = new SqlCommand(checkMaSachQuery, connsql);
+                checkMaSachCmd.Parameters.AddWithValue("@MaSach", txtMaSach.Text);
+                int sachCount = (int)checkMaSachCmd.ExecuteScalar();
+                if (sachCount == 0)
+                {
+                    MessageBox.Show("Mã sách không tồn tại. Vui lòng kiểm tra lại.");
+                    return;
+                }
+                string newa = getNewMaPhieu();
+                string insertQuery = "INSERT INTO PhieuMuon (MaPhieu, MaDocGia, MaSach, NgayMuon, NgayPhaiTra) " +
+                                     "VALUES (@MaPhieu, @MaDocGia, @MaSach, @NgayMuon, @NgayPhaiTra)";
+                SqlCommand insertCmd = new SqlCommand(insertQuery, connsql);
+                insertCmd.Parameters.AddWithValue("@MaPhieu", newa);
+                insertCmd.Parameters.AddWithValue("@MaDocGia", txtMaDocGia.Text);
+                insertCmd.Parameters.AddWithValue("@MaSach", txtMaSach.Text);
+                insertCmd.Parameters.AddWithValue("@NgayMuon", txtNgayMuon.Text);
+                insertCmd.Parameters.AddWithValue("@NgayPhaiTra", txtNgayPhaiTra.Text);
+
+                insertCmd.ExecuteNonQuery();
+
+                if (connsql.State == ConnectionState.Open)
+                {
+                    connsql.Close();
+                }
+
+                MessageBox.Show("Thêm phiếu mượn thành công.");
+                UpdateDataPhieuMuon();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Không thể thêm phiếu mượn. Lỗi: {ex.Message}");
+            }
+        }
+    }
+}       
