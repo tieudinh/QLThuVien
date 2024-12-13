@@ -1,0 +1,17 @@
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ BUS\bin\Debug\net8.0\Quản lý thư viện _ BUS.deps.json
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ BUS\bin\Debug\net8.0\Quản lý thư viện _ BUS.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ BUS\bin\Debug\net8.0\Quản lý thư viện _ BUS.pdb
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ BUS\bin\Debug\net8.0\Quản lý thư viện _ DAO.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ BUS\bin\Debug\net8.0\Quản lý thư viện _ DTO.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ BUS\bin\Debug\net8.0\Quản lý thư viện _ DAO.pdb
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ BUS\bin\Debug\net8.0\Quản lý thư viện _ DTO.pdb
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ BUS\obj\Debug\net8.0\Quản lý thư viện _ BUS.csproj.AssemblyReference.cache
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ BUS\obj\Debug\net8.0\Quản lý thư viện _ BUS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ BUS\obj\Debug\net8.0\Quản lý thư viện _ BUS.AssemblyInfoInputs.cache
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ BUS\obj\Debug\net8.0\Quản lý thư viện _ BUS.AssemblyInfo.cs
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ BUS\obj\Debug\net8.0\Quản lý thư viện _ BUS.csproj.CoreCompileInputs.cache
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ BUS\obj\Debug\net8.0\Qu_n l_ .778EBC3F.Up2Date
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ BUS\obj\Debug\net8.0\Quản lý thư viện _ BUS.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ BUS\obj\Debug\net8.0\refint\Quản lý thư viện _ BUS.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ BUS\obj\Debug\net8.0\Quản lý thư viện _ BUS.pdb
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ BUS\obj\Debug\net8.0\ref\Quản lý thư viện _ BUS.dll
