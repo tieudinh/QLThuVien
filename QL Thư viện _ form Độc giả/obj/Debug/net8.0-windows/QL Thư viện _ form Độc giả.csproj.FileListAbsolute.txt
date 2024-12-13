@@ -1,0 +1,52 @@
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\QL Thư viện _ form Độc giả.exe
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\QL Thư viện _ form Độc giả.deps.json
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\QL Thư viện _ form Độc giả.runtimeconfig.json
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\QL Thư viện _ form Độc giả.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\QL Thư viện _ form Độc giả.pdb
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\Azure.Core.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\Azure.Identity.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\System.ClientModel.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\System.Memory.Data.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\System.Runtime.Caching.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\obj\Debug\net8.0-windows\QL Thư viện _ form Độc giả.csproj.AssemblyReference.cache
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\obj\Debug\net8.0-windows\QL_Thư_viện___form_Độc_giả.frmQLDocGia.resources
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\obj\Debug\net8.0-windows\QL Thư viện _ form Độc giả.csproj.GenerateResource.cache
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\obj\Debug\net8.0-windows\QL Thư viện _ form Độc giả.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\obj\Debug\net8.0-windows\QL Thư viện _ form Độc giả.AssemblyInfoInputs.cache
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\obj\Debug\net8.0-windows\QL Thư viện _ form Độc giả.AssemblyInfo.cs
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\obj\Debug\net8.0-windows\QL Thư viện _ form Độc giả.csproj.CoreCompileInputs.cache
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\obj\Debug\net8.0-windows\QL Th_ v.54C8CD64.Up2Date
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\obj\Debug\net8.0-windows\QL Thư viện _ form Độc giả.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\obj\Debug\net8.0-windows\refint\QL Thư viện _ form Độc giả.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\obj\Debug\net8.0-windows\QL Thư viện _ form Độc giả.pdb
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\obj\Debug\net8.0-windows\QL Thư viện _ form Độc giả.genruntimeconfig.cache
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\QL Thư viện _ form Độc giả\obj\Debug\net8.0-windows\ref\QL Thư viện _ form Độc giả.dll

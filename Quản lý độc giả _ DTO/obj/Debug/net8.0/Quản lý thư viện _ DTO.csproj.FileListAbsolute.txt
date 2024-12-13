@@ -1,0 +1,12 @@
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý độc giả _ DTO\bin\Debug\net8.0\Quản lý thư viện _ DTO.deps.json
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý độc giả _ DTO\bin\Debug\net8.0\Quản lý thư viện _ DTO.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý độc giả _ DTO\bin\Debug\net8.0\Quản lý thư viện _ DTO.pdb
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý độc giả _ DTO\obj\Debug\net8.0\Quản lý thư viện _ DTO.csproj.AssemblyReference.cache
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý độc giả _ DTO\obj\Debug\net8.0\Quản lý thư viện _ DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý độc giả _ DTO\obj\Debug\net8.0\Quản lý thư viện _ DTO.AssemblyInfoInputs.cache
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý độc giả _ DTO\obj\Debug\net8.0\Quản lý thư viện _ DTO.AssemblyInfo.cs
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý độc giả _ DTO\obj\Debug\net8.0\Quản lý thư viện _ DTO.csproj.CoreCompileInputs.cache
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý độc giả _ DTO\obj\Debug\net8.0\Quản lý thư viện _ DTO.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý độc giả _ DTO\obj\Debug\net8.0\refint\Quản lý thư viện _ DTO.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý độc giả _ DTO\obj\Debug\net8.0\Quản lý thư viện _ DTO.pdb
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý độc giả _ DTO\obj\Debug\net8.0\ref\Quản lý thư viện _ DTO.dll
