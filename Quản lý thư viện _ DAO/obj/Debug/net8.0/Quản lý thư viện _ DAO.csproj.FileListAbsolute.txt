@@ -1,0 +1,15 @@
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ DAO\bin\Debug\net8.0\Quản lý thư viện _ DAO.deps.json
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ DAO\bin\Debug\net8.0\Quản lý thư viện _ DAO.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ DAO\bin\Debug\net8.0\Quản lý thư viện _ DAO.pdb
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ DAO\bin\Debug\net8.0\Quản lý thư viện _ DTO.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ DAO\bin\Debug\net8.0\Quản lý thư viện _ DTO.pdb
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ DAO\obj\Debug\net8.0\Quản lý thư viện _ DAO.csproj.AssemblyReference.cache
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ DAO\obj\Debug\net8.0\Quản lý thư viện _ DAO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ DAO\obj\Debug\net8.0\Quản lý thư viện _ DAO.AssemblyInfoInputs.cache
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ DAO\obj\Debug\net8.0\Quản lý thư viện _ DAO.AssemblyInfo.cs
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ DAO\obj\Debug\net8.0\Quản lý thư viện _ DAO.csproj.CoreCompileInputs.cache
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ DAO\obj\Debug\net8.0\Qu_n l_ .6F310D43.Up2Date
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ DAO\obj\Debug\net8.0\Quản lý thư viện _ DAO.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ DAO\obj\Debug\net8.0\refint\Quản lý thư viện _ DAO.dll
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ DAO\obj\Debug\net8.0\Quản lý thư viện _ DAO.pdb
+C:\Users\HT\source\repos\QL Thư viện _ form Độc giả\Quản lý thư viện _ DAO\obj\Debug\net8.0\ref\Quản lý thư viện _ DAO.dll
